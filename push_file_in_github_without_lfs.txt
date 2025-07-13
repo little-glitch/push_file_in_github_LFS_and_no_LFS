@@ -1,0 +1,25 @@
+
+# Guide: How to Push Files to GitHub (No LFS)
+
+# 1. Clone the repository to your computer
+git clone https://github.com/<your-username>/<your-repo-name>.git
+
+# 2. Go inside the cloned folder
+cd <your-repo-name>/
+
+# 3. Copy or move your project files into this folder
+
+# 4. Check which files are untracked
+git status
+
+# 5. Add all files to the staging area
+git add .
+
+# 6. Commit the files with a meaningful message
+git commit -m "Initial commit: add all project files"
+
+# 7. Push the commit to GitHub
+git push origin main
+
+# Done! Your files are now uploaded to GitHub.
+

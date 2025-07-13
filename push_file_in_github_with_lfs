@@ -1,0 +1,33 @@
+# Guide: How to Push Files to GitHub using Git LFS
+
+# 1. Clone your GitHub repository
+git clone https://github.com/<your-username>/<your-repo-name>.git
+
+# 2. Go inside the project folder in the system
+cd <your-repo-name>/
+
+# code for find large files in a folder 
+find . -type f -size +90M
+
+# 3. Track large files with Git LFS (for example: .h5 and .keras model files)
+git lfs track "*.h5"
+git lfs track "*.keras"
+
+# 4. Add the Git LFS tracking config file
+git add .gitattributes
+
+# 5. Add all files (code, datasets, models, etc.)
+git add .
+
+# 6. Commit with a clear message
+git commit -m "Add project files and track large model files using Git LFS"
+
+# 7. Push to GitHub
+git push origin main
+
+# Notes:
+# - GitHub has a 100MB file size limit for normal Git.
+# - Git LFS should be used for large files (models, datasets, etc.).
+# - If you modify the last commit (e.g., with git commit --amend), use:
+#   git push origin main --force
+
